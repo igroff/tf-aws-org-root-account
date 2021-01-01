@@ -72,7 +72,7 @@ resource "aws_lambda_function" "function" {
 
 resource "aws_cloudwatch_event_rule" "nightly_schedule" {
   name                = "ShutdownTaggedInstancesNightly"
-  schedule_expression = "cron(0 5 * * ? *)
+  schedule_expression = "cron(0 5 * * ? *)"
   description         = "Triggers the lambda that shuts down tagged instances (lambda function defines the tags)"
 }
 
